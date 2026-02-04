@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Perpustakaan Digital</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Library - The Library Website is Coming Soon</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #8B0000, #800020);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: black;
+        }
+
+        .container {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 60px;
+            margin: 0;
+            letter-spacing: 3px;
+        }
+
+        p {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-  <h1>The Library Website is Coming Soon</h1>
-  <p>Website Perpustakaan akan segera hadir.</p>
+    <div class="container">
+        <h1>Digital Library</h1>
+        <p>The Library Website is Coming Soon.<br>
+        Pengetahuan Digital untuk Generasi Masa Depan.</p>
+    </div>
 </body>
 </html>
