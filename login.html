@@ -5,88 +5,111 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login - Rayhana Digital Library</title>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+  /* ===== Gaya Umum ===== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   body {
     font-family: 'Outfit', sans-serif;
-    background-color: #faf6f0;
-    color: #2a2a2a;
+    background-color: #800000; /* Warna maroon khas homepage */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  /* ===== Kartu Form ===== */
+  .form-wrapper {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid #e6d5b8;
+    border-radius: 25px;
+    padding: 50px 60px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 480px;
+    color: #fff;
     text-align: center;
-    padding: 60px;
-    position: relative;
-    overflow: hidden;
   }
 
   h2 {
-    color: #800000;
-    margin-bottom: 15px;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 10px;
   }
 
   p {
+    color: #f5e9d7;
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+
+  /* ===== Input Form ===== */
+  .input-group {
+    text-align: left;
     margin-bottom: 20px;
   }
 
-  .form-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    height: 500px; /* tinggi area form */
-  }
-
-  .form-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transition: all 0.4s ease;
-    opacity: 0;
-    transform: translateY(30px);
-    pointer-events: none;
-  }
-
-  .form-container.active {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-
-  table {
-    margin: 0 auto;
-    border-collapse: collapse;
-    width: 100%;
-    background: #fff3ea;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  }
-
-  td {
-    padding: 12px;
-    text-align: left;
+  label {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 6px;
   }
 
   input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #d3c4a3;
-    border-radius: 8px;
+    max-width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #e6d5b8;
+    border-radius: 10px;
     font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    background: #fffaf4;
+    color: #2a2a2a;
+    outline: none;
+    transition: all 0.3s ease;
   }
 
+  input:focus {
+    border-color: #f2e4cc;
+    box-shadow: 0 0 0 2px #e6d5b8;
+  }
+
+  /* ===== Tombol ===== */
   button {
-    background: #800000;
-    color: white;
-    padding: 10px 25px;
+    background: #e6d5b8;
+    color: #7b1f1f;
+    padding: 12px 45px;
     border: none;
-    border-radius: 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
 
   button:hover {
-    background: #a52a2a;
+    background: #f2e4cc;
+    transform: translateY(-2px);
+  }
+
+  /* ===== Teks Switch ===== */
+  .switch-text {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 25px;
   }
 
   a {
-    color: #800000;
+    color: #f2e4cc;
     text-decoration: none;
     font-weight: 600;
   }
@@ -95,48 +118,67 @@
     text-decoration: underline;
   }
 
+  /* ===== Ganti Tampilan Form ===== */
+  #registerForm {
+    display: none;
+  }
+
+  @media (max-width: 480px) {
+    .form-wrapper {
+      padding: 35px 25px;
+    }
+  }
 </style>
 </head>
 <body>
 
   <div class="form-wrapper">
     <!-- ===== FORM LOGIN ===== -->
-    <div id="loginForm" class="form-container active">
-      <h2>Login ke Rayhana Digital Library</h2>
-      <p>Masuk dengan akun Anda untuk mengakses koleksi digital.</p>
+    <div id="loginForm">
+      <h2>Login</h2>
+      <p>Masuk ke akun Rayhana Digital Library</p>
       <form>
-        <table>
-          <tr><td>Email</td><td><input type="email" placeholder="Masukkan email Anda" required></td></tr>
-          <tr><td>Password</td><td><input type="password" placeholder="Masukkan password" required></td></tr>
-          <tr>
-            <td colspan="2" style="text-align:center;">
-              <button type="submit">Login</button>
-            </td>
-          </tr>
-        </table>
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" placeholder="Masukkan email Anda" required>
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" placeholder="Masukkan password" required>
+        </div>
+        <button type="submit">Login</button>
       </form>
-      <p>Belum punya akun? <a href="#" id="showRegister">Daftar sekarang</a></p>
+      <p class="switch-text">Belum punya akun? <a href="#" id="showRegister">Daftar sekarang</a></p>
     </div>
 
-    <!-- ===== FORM DAFTAR ===== -->
-    <div id="registerForm" class="form-container">
-      <h2>Daftar Anggota Baru</h2>
-      <p>Isi formulir di bawah untuk menjadi anggota Rayhana Digital Library.</p>
+    <!-- ===== FORM REGISTER ===== -->
+    <div id="registerForm">
+      <h2>Daftar Anggota</h2>
+      <p>Buat akun baru untuk mengakses koleksi digital Rayhana</p>
       <form>
-        <table>
-          <tr><td>First Name</td><td><input type="text" placeholder="Nama depan" required></td></tr>
-          <tr><td>Last Name</td><td><input type="text" placeholder="Nama belakang" required></td></tr>
-          <tr><td>Nomor HP</td><td><input type="tel" placeholder="Nomor telepon aktif" required></td></tr>
-          <tr><td>Email</td><td><input type="email" placeholder="Masukkan email aktif" required></td></tr>
-          <tr><td>Password</td><td><input type="password" placeholder="Buat password" required></td></tr>
-          <tr>
-            <td colspan="2" style="text-align:center;">
-              <button type="submit">Daftar</button>
-            </td>
-          </tr>
-        </table>
+        <div class="input-group">
+          <label>First Name</label>
+          <input type="text" placeholder="Nama depan" required>
+        </div>
+        <div class="input-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Nama belakang" required>
+        </div>
+        <div class="input-group">
+          <label>Nomor HP</label>
+          <input type="tel" placeholder="Nomor telepon aktif" required>
+        </div>
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" placeholder="Masukkan email aktif" required>
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" placeholder="Buat password" required>
+        </div>
+        <button type="submit">Daftar</button>
       </form>
-      <p>Sudah punya akun? <a href="#" id="showLogin">Login</a></p>
+      <p class="switch-text">Sudah punya akun? <a href="#" id="showLogin">Login</a></p>
     </div>
   </div>
 
@@ -146,18 +188,16 @@
     const showRegister = document.getElementById('showRegister');
     const showLogin = document.getElementById('showLogin');
 
-    // Tampilkan form daftar
     showRegister.addEventListener('click', (e) => {
       e.preventDefault();
-      loginForm.classList.remove('active');
-      registerForm.classList.add('active');
+      loginForm.style.display = "none";
+      registerForm.style.display = "block";
     });
 
-    // Tampilkan form login kembali
     showLogin.addEventListener('click', (e) => {
       e.preventDefault();
-      registerForm.classList.remove('active');
-      loginForm.classList.add('active');
+      registerForm.style.display = "none";
+      loginForm.style.display = "block";
     });
   </script>
 
