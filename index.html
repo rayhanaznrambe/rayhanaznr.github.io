@@ -114,11 +114,15 @@
 
       nav ul {
         flex-direction: column;
+        align-items: center;
         width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
         background-color: #800000;
         border-top: 2px solid #e6d5b8;
-        margin-top: 10px;
         display: none;
+        animation: slideDown 0.3s ease;
       }
 
       nav ul.active {
@@ -126,14 +130,19 @@
       }
 
       nav li {
-        padding: 10px 0;
-        text-align: center;
+        width: 100%;
+        padding: 12px 0;
         border-bottom: 1px solid rgba(255,255,255,0.2);
       }
 
       nav a {
         display: block;
         width: 100%;
+      }
+
+      @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
       }
     }
 
