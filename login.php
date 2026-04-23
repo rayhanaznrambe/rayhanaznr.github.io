@@ -162,7 +162,7 @@ if(isset($_POST['login'])){
 }
 ?>
 
-<a href="index.html" class="back">← Kembali ke Website</a>
+<a href="https://rayhanaznrambe.github.io/">Back to Home</a>
 
 </div>
 
