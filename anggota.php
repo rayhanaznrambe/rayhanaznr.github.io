@@ -162,8 +162,7 @@ color:#fff;
 <nav>
     <h1>Source Library Admin</h1>
     <div>
-        <a href="index.html">Home</a>
-        <a href="logout.php">Logout</a>
+        <a href="https://rayhanaznrambe.github.io/">Back to Home</a>
     </div>
 </nav>
 
