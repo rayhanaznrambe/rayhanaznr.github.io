@@ -670,6 +670,42 @@ border-top: 1px solid rgba(255,255,255,0.1);
 .footer-bottom strong{
 color:#e6d5b8
 }
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+}
+
+/* MENU DROPDOWN */
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    
+    /* INI YANG PENTING 👇 */
+    right: 0;        /* biar nempel ke kanan */
+    left: auto;      /* matiin left */
+
+    background: #800000;
+    min-width: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    z-index: 999;
+}
+
+/* ITEM */
+.dropdown-content a {
+    display: block;
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* HOVER */
+.dropdown:hover .dropdown-content {
+    display: block;
 </style>
 </head>
 
@@ -699,7 +735,15 @@ color:#e6d5b8
 <li><a href="admin.html">Admin</a></li>
 <li><a href="kontak.html">Contact</a></li>
 <li><a href="login.html" target="_blank"><strong>Login</strong></a></li>
-<li><a href="looping.php">Looping</a></li>
+<li class="dropdown">
+    <a>PHP ▾</a>
+    <div class="dropdown-content">
+        <a href="http://sourcelibrary.lovestoblog.com/looping.php">Looping</a>
+        <a href="http://sourcelibrary.lovestoblog.com/kalkulator.php">Kalkulator</a>
+        <a href="http://sourcelibrary.lovestoblog.com/login.php">Login Admin</a>
+        <a href="http://sourcelibrary.lovestoblog.com/anggota.php">Keanggotaan</a>
+    </div>
+</li>
 </ul>
 </nav>
 
