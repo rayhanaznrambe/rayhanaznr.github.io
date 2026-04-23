@@ -84,13 +84,13 @@ h2{
 
 <nav>
     <h1 onclick="window.location.href='index.html'">Source Library</h1>
-    <a href="index.html">← Kembali</a>
+    <a href="https://rayhanaznrambe.github.io/">Home</a>
 </nav>
 
 <div class="container">
     <h2>Belajar PHP - Looping 1000 Hari</h2>
 
-    <a href="index.html" class="back">← Kembali ke Beranda</a>
+    <a href="https://rayhanaznrambe.github.io/">Back to Home</a>
 
     <?php
     for ($i = 1; $i <= 1000; $i++) {
