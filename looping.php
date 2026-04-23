@@ -37,7 +37,7 @@ nav a{
 
 /* CONTAINER */
 .container{
-    max-width:1100px;
+    max-width:900px;
     margin:60px auto;
     background:#fff;
     padding:40px;
@@ -52,30 +52,18 @@ h2{
     font-family:"Cinzel",serif;
 }
 
-/* GRID LOOP */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
-    gap:12px;
-}
-
-/* ITEM */
+/* LIST ITEM */
 .item{
-    background:#faf6f0;
-    padding:12px;
-    border-radius:12px;
-    text-align:center;
-    font-size:14px;
-    border:1px solid #e6d5b8;
-    transition:0.25s;
+    padding:12px 15px;
+    border-bottom:1px solid #eee;
+    font-size:15px;
+    transition:0.2s;
 }
 
-/* HOVER EFFECT */
+/* HOVER */
 .item:hover{
-    background:#800000;
-    color:#fff;
-    transform:translateY(-3px) scale(1.05);
-    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+    background:#faf6f0;
+    padding-left:20px;
 }
 
 /* BACK BUTTON */
@@ -104,13 +92,11 @@ h2{
 
     <a href="index.html" class="back">← Kembali ke Beranda</a>
 
-    <div class="grid">
     <?php
     for ($i = 1; $i <= 1000; $i++) {
-        echo "<div class='item'>Hari ke-$i</div>";
+        echo "<div class='item'>Ini adalah hari ke-$i belajar PHP</div>";
     }
     ?>
-    </div>
 
 </div>
 
