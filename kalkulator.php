@@ -112,7 +112,7 @@ button:hover{
 
 </form>
 
-<a href="index.html" class="back">← Kembali ke Beranda</a>
+<a href="https://rayhanaznrambe.github.io/">Back to Home</a>
 
 </div>
 
